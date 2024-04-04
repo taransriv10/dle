@@ -28,7 +28,7 @@ class DleApplicationTests {
         int result = restTemplate.getForObject("http://localhost:" + port + "/double?number=" + inputNumber, Integer.class);
 
         // Then
-        assertEquals(inputNumber,result);
+        assertEquals(14,result);
     }
 
 }
