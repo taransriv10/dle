@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
 
-import static org.assertj.core.api.ClassBasedNavigableIterableAssert.assertThat;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -23,7 +22,7 @@ class DleApplicationTests {
     @Test
     public void testDoubleNumberEndpoint() {
         // Given
-        int inputNumber = 5;
+        int inputNumber = 7;
 
         // When
         int result = restTemplate.getForObject("http://localhost:" + port + "/double?number=" + inputNumber, Integer.class);
